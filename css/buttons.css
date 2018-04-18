@@ -38,6 +38,7 @@
   width: 100%;
   position: absolute;
   top: 1.0vmax;
+  right: 1.0vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
