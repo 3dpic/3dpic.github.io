@@ -59,10 +59,6 @@ window.onload = function () {
     .hide()
     .delay(4000)
     .fadeIn(600);
-  $("#copyRight").css("display", "flex")
-    .hide()
-    .delay(4000)
-    .fadeIn(600);
   $("#help1")
     .delay(2000)
     .fadeIn(600)

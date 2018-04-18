@@ -155,7 +155,7 @@ function animateCamera() {
         keyTrack.autoRotSpeed[0] = controls.autoRotateSpeed;
         //--Вывод текстовой информации в диве
         if(keyTrack.textIDResource != null ) {
-          $(keyTrack.divID).hide().empty();          
+          $(keyTrack.divID).hide().empty();
           $(keyTrack.divID).css('top', function(index, value) {
           let newTop = keyTrack.divTop[ 0 ] + "%";
           return newTop;
@@ -230,26 +230,3 @@ function animateCamera() {
     }
   }
 }
-
-//-------------------------------Вывод параметров камеры-----------------------------
-function showCameraParam() {
-  let vectorCam = new THREE.Vector3( 0, 0, 0 );
-  let axisY = new THREE.Vector3( 0, 1, 0 );  //вектор направление вверх - ось Y
-  let axisZ = new THREE.Vector3( -1, 0, 0 );
-  let angelOy = 0;
-  let camLookAtx = controls.target.x;
-  let camLookAty = controls.target.y;
-  let camLookAtz = controls.target.z;
-  let distance = camera.position.distanceTo(controls.target);
-  vectorCam.subVectors(camera.position, controls.target);
-  let angelPlaneXZ = THREE.Math.radToDeg(vectorCam.angleTo(axisY)) - 90;
-  angelOy = calcOYangel(vectorCam);
-
-  console.log( 'CamX=%d CamY=%d CamZ=%d', camera.position.x, camera.position.y, camera.position.z);
-  console.log( 'TarX=%d TarY=%d TarZ=%d', controls.target.x, controls.target.y, controls.target.z);
-  console.log( 'dist=%d', distance);
-  console.log( 'angelPlaneXZ=%d', angelPlaneXZ);
-  console.log( 'angelOy=%d', angelOy);
-  console.log( '----------------------------');
-}
-btnTemp.addEventListener( "click" , showCameraParam );

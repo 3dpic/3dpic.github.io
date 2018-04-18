@@ -63,16 +63,6 @@ let stainlessGunMetal = new THREE.MeshStandardMaterial({
   side: THREE.DoubleSide
 });
 
-// stainlessGunMetal.envMap = textureCube;
-// stainlessGunMetal.needsUpdate = true;
-// stainlessGunMetal.map = StainlessGunMetal_albedo;
-// stainlessGunMetal.map.wrapS = THREE.RepeatWrapping;
-// stainlessGunMetal.map.wrapT = THREE.RepeatWrapping;
-// stainlessGunMetal.map.repeat.set( 1, 1 );
-// stainlessGunMetal.roughnessMap = StainlessGunMetal_roughness;
-// stainlessGunMetal.roughnessMap.wrapS = THREE.RepeatWrapping;
-// stainlessGunMetal.roughnessMap.wrapT = THREE.RepeatWrapping;
-// stainlessGunMetal.roughnessMap.repeat.set( 1, 1 );
 let matGold = new THREE.MeshStandardMaterial({
   color: 0xffc355,    //Gold	(1.000, 0.766, 0.336) or [255, 195, 86]
   metalness: 0.9,
@@ -166,30 +156,6 @@ vertexShader: shader.vertexShader,
 fragmentShader: shader.fragmentShader,
 transparent: true
 } );
-// let shader2 = THREE.GhostShader;
-// let matGhost = new THREE.ShaderMaterial( {
-// uniforms: uniforms,
-// vertexShader: shader2.vertexShader,
-// fragmentShader: shader2.fragmentShader,
-// needsUpdate: true,
-// transparent: true
-// } );
-let matGhos2t = new THREE.ShaderMaterial( {
-vertexShader: document.getElementById( '2d-vertex-shader' ).textContent,
-fragmentShader: document.getElementById( '2d-fragment-shader' ).textContent,
-transparent: true
-} );
-
-
-// matRAL7045.envMap = textureCube;
-// matRAL7045.needsUpdate = true;
-//
-// matPlastic.envMap = textureCube;
-// matPlastic.needsUpdate = true;
-// matSteelClear.envMap = textureCube;
-// matSteelClear.needsUpdate = true;
-// matPlasticWhite.envMap = textureCube;
-// matPlasticWhite.needsUpdate = true;
 
 let matStoikaVert = [
   new THREE.MeshStandardMaterial({
@@ -206,45 +172,3 @@ let matStoikaGoriz2 = [
     color : 0x00ff00
   })
 ];
-
-
-// var myVertexShader, myFragmentShader;
-// loadTextResource('/js/myFresnel.c')
-// .then(function(result) {
-//   myVertexShader = result;
-//   return loadTextResource('/js/myFresnel.c');
-// })
-// .then(function(result) {
-//   myFragmentShader = "res23232ult";
-//   return ;
-// })
-// .catch(function(error) {
-//   alert('Error. See Console');
-//   console.error(error);
-// })
-
-// var genCubeUrls = function( prefix, postfix ) {
-//   return [
-//     prefix + 'px' + postfix, prefix + 'nx' + postfix,
-//     prefix + 'py' + postfix, prefix + 'ny' + postfix,
-//     prefix + 'pz' + postfix, prefix + 'nz' + postfix
-//   ];
-// };
-// var hdrUrls = genCubeUrls( './textures/cube/pisaHDR/', '.hdr' );
-// new THREE.HDRCubeTextureLoader().load( THREE.UnsignedByteType, hdrUrls, function ( hdrCubeMap ) {
-//   var pmremGenerator = new THREE.PMREMGenerator( hdrCubeMap );
-//   pmremGenerator.update( renderer );
-//   var pmremCubeUVPacker = new THREE.PMREMCubeUVPacker( pmremGenerator.cubeLods );
-//   pmremCubeUVPacker.update( renderer );
-//   var hdrCubeRenderTarget = pmremCubeUVPacker.CubeUVRenderTarget;
-//   materials[0].envMap = hdrCubeRenderTarget.texture;
-//   materials[0].needsUpdate = true;
-//   materials[1].envMap = hdrCubeRenderTarget.texture;
-//   materials[1].needsUpdate = true;
-//   //materials[2].envMap = hdrCubeRenderTarget.texture;
-//   //materials[2].needsUpdate = true;
-//   // materials[3].envMap = hdrCubeRenderTarget.texture;
-//   // materials[3].needsUpdate = true;
-//   // materials[5].envMap = hdrCubeRenderTarget.texture;
-//   // materials[5].needsUpdate = true;
-// } );
