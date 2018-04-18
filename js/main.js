@@ -146,13 +146,7 @@ btnShowHowItWork.addEventListener( "click" , showHowItWork );
 btnShowHowItWork2.addEventListener( "click" , showHowItWork2 );
 btnResetCemera.addEventListener( "click" , setCamera );
 btnStopAnim.addEventListener( "click" , stopCameraAnim );
-//во весь экран
-btnFullscrn.addEventListener( "click" , toggleFullScreen );
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+
 btnModelsSelect1.addEventListener( "click" , selectModels );
 btnModelsSelect2.addEventListener( "click" , selectModels );
 
